@@ -41,7 +41,7 @@ const PreviewModel = ({ mediaUrl, isModalOpen, handleCloseModal, downloadHandler
               </div>
 
               <div className="p-4 md:p-5 space-y-4 flex items-center justify-center ">
-                {mediaUrl && <video src={mediaUrl} autoPlay loop className='w-auto h-[15rem] md:h-[27rem]' />}
+                {mediaUrl && <video src={mediaUrl} autoPlay loop controls className='w-auto h-[15rem] md:h-[27rem]' />}
               </div>
 
               <div className="flex items-center justify-center p-2 md:p-3 border-t border-gray-200 rounded-b ">

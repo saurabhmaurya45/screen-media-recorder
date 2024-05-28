@@ -95,7 +95,7 @@ const Index = () => {
             <div className='flex justify-center items-center  flex-col' >
                 <h2 className="font-bold text-lg my-4">Recording Status : {makeProper(status)}</h2>
                 <h4 className='my-4'>Preview👇</h4>
-                <div className={status == "idle" ? "preview-container h-96 border-[2px] w-[90%] md:w-[50%] " : "preview-container h-96 border-[2px] w-auto"}>
+                <div className={status == "idle" || status=="paused" ? "preview-container h-96 border-[2px] w-[90%] md:w-[50%] " : "preview-container h-96 border-[2px] w-auto"}>
                     {
                         status === 'recording' ?
                             <video ref={videoRef} autoPlay loop className='w-auto h-96' /> : null
