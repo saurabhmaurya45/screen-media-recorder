@@ -144,20 +144,20 @@ const Index = () => {
                         <label htmlFor="audio" className='ml-2'>Audio</label>
                         <span className='mx-2'>|</span>
                     </div>
-                    <div>
+                    {isScreenCaptureSupported && <div>
                         <input type='radio' name='recording-type' id="screen" />
                         <label htmlFor="screen" className='ml-2'>Screen</label>
                         <span className='mx-2'>|</span>
-                    </div>
+                    </div>}
                     <div>
                         <input type='radio' name='recording-type' id="video-audio" />
                         <label htmlFor="video-audio" className='ml-2'>Video + Audio</label>
                         <span className='mx-2'>|</span>
                     </div>
-                    <div>
+                    {isScreenCaptureSupported && <div>
                         <input type='radio' name='recording-type' id="screen-audio" />
                         <label htmlFor="screen-audio" className='ml-2'>Screen + Audio</label>
-                    </div>
+                    </div>}
                 </div>
                 {!mediaBlobUrl && (
                     <div className='flex gap-6 my-4'>
